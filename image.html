@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8" />
 
-        <title>Template</title>
-        <meta name="description" content="A template for drawings" />
+        <title>{{page.title}}</title>
+        <meta name="description" content="{{page.description}}" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     </head>
     <body>
 
-        <a href="index.html">
+        <a href="{{page.next}}">
 
-            <img src="img/elsa.jpg" alt="Untitled by Quinten Clause" />
+            <img src="img/{{page.img}}" alt="{{page.title}}" />
 
-            <span class="stretcher">&nsbps;</span>
+            <span class="stretcher">&nbsp;</span>
 
         </a>
 
