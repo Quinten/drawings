@@ -21,7 +21,7 @@ for (var p = 0; p < pages.length; p++) {
 pages.forEach(page => {
     let html = fs.readFileSync('image.html', { encoding: 'utf8', flag: 'r' });
     html = html.replace(/\{\{(.+?)\}\}/g, (match) => { return eval(match.replace('{{', '').replace('}}', '')); });
-    fs.writeFile('pub/' + page.href, html);
+    fs.writeFileSync('pub/' + page.href, html);
 });
 
 function getLinks() {
@@ -34,6 +34,6 @@ function getLinks() {
 
 let indexHtml = fs.readFileSync('index.html', { encoding: 'utf8', flag: 'r' });
 indexHtml = indexHtml.replace(/\{\{(.+?)\}\}/g, (match) => { return eval(match.replace('{{', '').replace('}}', '')); });
-fs.writeFile('pub/index.html', indexHtml);
+fs.writeFileSync('pub/index.html', indexHtml);
 
 console.log('Built!');
